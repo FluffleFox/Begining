@@ -3,9 +3,10 @@
 public class Pipe : MonoBehaviour
 {
     Vector3 left;
+    public float speed = 1.5f;
     void Start()
     {
-        left = Vector3.left;
+        left = Vector3.left*speed;
         LosujPozycje();
     }
 

@@ -18,6 +18,7 @@ public class Bird : MonoBehaviour
         {
             rb.AddForce(Vector3.up * force, ForceMode.Impulse);
         }
+        transform.GetChild(0).rotation = Quaternion.Euler(0, 0, Mathf.Atan2(rb.velocity.y, 2) * Mathf.Rad2Deg);
     }
 
     private void OnCollisionEnter(Collision collision)
